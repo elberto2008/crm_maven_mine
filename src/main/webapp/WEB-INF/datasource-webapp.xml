@@ -28,6 +28,9 @@
 				<property name="database" value="ORACLE"/>
 			</bean>
 		</property>	
+		
+		<property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml"/>
+		
 
     </bean>
 

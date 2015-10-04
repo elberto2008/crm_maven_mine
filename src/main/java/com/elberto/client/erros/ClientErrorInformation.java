@@ -2,7 +2,7 @@ package com.elberto.client.erros;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-//test nn
+//test nn nn
 @XmlRootElement
 public class ClientErrorInformation 
 {

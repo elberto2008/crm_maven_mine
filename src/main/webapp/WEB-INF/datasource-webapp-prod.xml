@@ -6,10 +6,10 @@
 
     
      <bean id = "dataSource" class = "org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="url" value ="jdbc:oracle:thin:@localhost:1521:elberto"/>
+		<property name="url" value ="jdbc:oracle:thin:@localhost:1521:orcl"/>
 		<property name="driverClassName" value ="oracle.jdbc.driver.OracleDriver"/>
 		<property name="username" value = "system"/>
-		<property name="password" value ="elberto2008"/>
+		<property name="password" value ="oracle"/>
 	</bean>
 	
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

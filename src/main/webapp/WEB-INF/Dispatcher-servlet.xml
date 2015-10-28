@@ -10,7 +10,7 @@
 	                    http://www.springframework.org/schema/mvc 
 	                    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	          
+	  
 	<import resource="/daos.xml"/>
 	<import resource="/services.xml"/>
 	<import resource="/datasource-webapp.xml"/>

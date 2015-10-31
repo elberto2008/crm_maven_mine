@@ -9,7 +9,12 @@
 
 	<name>crm</name>
 	<url>http://maven.apache.org</url>
-
+	<repositories>
+    	<repository>
+  	 	   <id>codelds</id>
+   	       <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+    	</repository>
+  	</repositories>
 
 	<build>
 		<plugins>
@@ -161,11 +166,12 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.0.2.RELEASE</version>
 		</dependency>
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-orm</artifactId>
-	<version>4.0.1.RELEASE</version>
-</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.0.1.RELEASE</version>
+		</dependency>
 
 
 		<dependency>
@@ -187,9 +193,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.0.2</version>
+		    <groupId>com.oracle</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>11.2.0.3</version>
 		</dependency>
 		
 

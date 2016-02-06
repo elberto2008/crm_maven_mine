@@ -23,8 +23,8 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
-					<outputDirectory>/Applications/apache-tomcat-7.0.47/webapps</outputDirectory>
-					<warName>rest</warName>
+					<outputDirectory>/Applications/apache-tomcat-8.0.30/webapps</outputDirectory>
+					<warName>crm</warName>
 
 				</configuration>
 			</plugin>
@@ -134,7 +134,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
-			<scope>provided</scope>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -196,11 +196,85 @@
 		    <groupId>com.oracle</groupId>
 		    <artifactId>ojdbc6</artifactId>
 		    <version>11.2.0.3</version>
+		    <scope>compile</scope>
 		</dependency>
 		
+  <!-- Spring Security -->
+    <dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+		<version>4.0.2.RELEASE</version>
+
+	</dependency>
+	
+    <dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+		<version>4.0.2.RELEASE</version>
+
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-ldap</artifactId>
+		<version>4.0.2.RELEASE</version>
+	</dependency>
+    
+    <dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-taglibs</artifactId>
+		<version>4.0.2.RELEASE</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-acl</artifactId>
+		<version>4.0.2.RELEASE</version>
+
+	</dependency>    
+    
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-cas</artifactId>
+		<version>4.0.2.RELEASE</version>
+
+	</dependency>    
+    
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-openid</artifactId>
+		<version>4.0.2.RELEASE</version>
+	</dependency>    
+	
+	<dependency>
+		<groupId>org.springframework.security.oauth</groupId>
+		<artifactId>spring-security-oauth2</artifactId>
+		<version>2.0.7.RELEASE</version>
+	</dependency>
+	
+	
+	<dependency>
+		<groupId>jstl</groupId>
+		<artifactId>jstl</artifactId>
+		<version>1.2</version>
+		<scope>runtime</scope>
+	</dependency>
+	<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>1.2.2</version>
+	</dependency>
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.17</version>
+	</dependency>
 
 
-
-
+	<dependency>
+		<groupId>xml-apis</groupId>
+		<artifactId>xml-apis</artifactId>
+		<version>1.4.01</version>
+	</dependency>
 	</dependencies>
 </project>

@@ -50,7 +50,7 @@ public class CustomerRestController
 	
 	
 	
-	@RequestMapping(value="/customer/{id}",method=RequestMethod.GET)
+	@RequestMapping(value="/rest/customer/{id}",method=RequestMethod.GET)
 	public Customer findCustomerById(@PathVariable String id, @RequestParam(required=false, defaultValue="true") boolean fullDetail ) throws CustomerNotFoundException
 	{	
 	
@@ -68,7 +68,7 @@ public class CustomerRestController
 	
 	}
 
-    @RequestMapping(value="/customers",method=RequestMethod.GET)
+    @RequestMapping(value="/rest/customers",method=RequestMethod.GET)
 	public CustomerCollectionRepresentation getAllCustomers(@RequestParam(required=true) boolean fullDetails) throws CustomerNotFoundException
 	{
   
@@ -97,7 +97,7 @@ public class CustomerRestController
    }
 	
     
-	@RequestMapping(value="/customers", method=RequestMethod.POST )
+	@RequestMapping(value="/rest/customers", method=RequestMethod.POST )
 	public ResponseEntity<Customer> createNewCustomer(@RequestBody @Valid Customer newCustomer) throws CustomerNotFoundException 
 	{
 		Customer createdCusmer = customerService.newCustomer(newCustomer);
@@ -108,7 +108,7 @@ public class CustomerRestController
 	
 	
 	
-	@RequestMapping(value="/customer/{id}", method=RequestMethod.DELETE )
+	@RequestMapping(value="/rest/customer/{id}", method=RequestMethod.DELETE )
 	public void deleteCustomerById(@PathVariable String id)
 	{
 		  try 
@@ -123,7 +123,7 @@ public class CustomerRestController
 	}
 	
 	
-	@RequestMapping(value="/customer/{id}", method=RequestMethod.PUT )
+	@RequestMapping(value="/rest/customer/{id}", method=RequestMethod.PUT )
 	public ResponseEntity<Customer> updateCustomerById(@RequestBody Customer customerToUpdate)
 	{
 
@@ -143,7 +143,7 @@ public class CustomerRestController
 	}
 	
 	
-	@RequestMapping(value="/customer/{id}", method=RequestMethod.PATCH )
+	@RequestMapping(value="/rest/customer/{id}", method=RequestMethod.PATCH )
 	public ResponseEntity<Customer> partialUpdateCustomerById(@RequestBody Customer customerToUpdate, @PathVariable String id)
 	{
 
@@ -178,7 +178,7 @@ public class CustomerRestController
 	
 	}
 	
-	@RequestMapping(value="/customer/{id}/calls", method=RequestMethod.POST)
+	@RequestMapping(value="/rest/customer/{id}/calls", method=RequestMethod.POST)
 	public ResponseEntity<CallActionRepresention> recordCallBussinessProcess(@RequestBody @Valid CallActionRepresention incomingCall, @PathVariable String id) throws CustomerNotFoundException
 	{
 		
@@ -201,7 +201,7 @@ public class CustomerRestController
 	}
 	
 	
-	@RequestMapping(value="/customer/{id}/calls", method=RequestMethod.GET)
+	@RequestMapping(value="/rest/customer/{id}/calls", method=RequestMethod.GET)
 	public CallCollection getAllCallsForCustomer(@PathVariable String id) throws CustomerNotFoundException
 	{
 		Customer customer =  customerService.getFullCustomerDetail(id);
@@ -210,7 +210,7 @@ public class CustomerRestController
 		
 	}
 	
-	@RequestMapping(value="/user/{userid}/actions", method=RequestMethod.GET)
+	@RequestMapping(value="/rest/user/{userid}/actions", method=RequestMethod.GET)
 	public ActionCollection getAllIncompleteActionsForUser(@PathVariable String userid) 
 	{	
 		return new ActionCollection(diaryService.getAllIncompleteActions(userid));
